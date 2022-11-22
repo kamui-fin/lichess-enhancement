@@ -7,7 +7,7 @@
     "icons": {
         "48": "assets/logo/chesscom_pawn.png"
     },
-    "permissions": ["storage", "webRequest", "webRequestBlocking"],
+    "permissions": ["storage", "webRequest", "webRequestBlocking", "declarativeNetRequest"],
     "host_permissions": [
         "https://lichess.org/*",
         "https://lichess1.org/*"
@@ -21,7 +21,7 @@
         }
     ],
     "background": {
-        "scripts": ["background.js"]
+        "service_worker": "background.js"
     },
     "action": {
         "default_icon": "assets/logo/chesscom_pawn.png",

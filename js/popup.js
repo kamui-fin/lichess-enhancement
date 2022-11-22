@@ -1,3 +1,7 @@
+if (typeof browser === "undefined") {
+    var browser = chrome;
+}
+
 const board_select = document.getElementById("board_select")
 const piece_select = document.getElementById("pieces_select")
 

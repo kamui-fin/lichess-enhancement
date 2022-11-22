@@ -1,3 +1,7 @@
+if (typeof browser === "undefined") {
+    var browser = chrome;
+}
+
 // apply piece style from storage
 const applyPieces = (reset = false) => {
     browser.storage.sync.get("pieces").then(data => {
