@@ -1,14 +1,15 @@
 const Boards = {
     updateBg: (url) => {
         for (let board of document.querySelectorAll("cg-board")) {
-            board.style.backgroundImage = "url(" + url + ")"
+            board.style.backgroundImage = `url(${url})`
+            console.log(board)
         }
 
     },
     replaceBackgroundImage: function(board_url) {
         this.updateBg(board_url)
         document.arrive("cg-board", function() {
-            this.updateBg(board_url)
+            this.style.backgroundImage = `url(${board_url})`
         })
     },
 
@@ -20,7 +21,7 @@ const Boards = {
     },
 
     chooseStyleAndApply: function(style_id) {
-        const board = chrome.runtime.getURL(
+        const board = browser.runtime.getURL(
             "assets/boards/" + style_id + ".png"
         )
         this.replaceBackgroundImage(board)
@@ -58,8 +59,9 @@ const Pieces = {
         }
     },
 
-    greatReset: function(styleObj) {
-        for (let [selector, _] of Object.entries(styleObj)) {
+    greatReset: function() {
+        for (let obj of pieces) {
+            const selector = Object.keys(obj)[0]
             for (let element of document.querySelectorAll(selector)) {
                 element.style.backgroundImage = null
             }
@@ -72,10 +74,10 @@ const Pieces = {
             const [selector, shorthand] = Object.entries(piece)[0]
 
             let extension = "png"
-            if (piece in overrides)
-                extension = overrides[piece]
+            if (id in overrides && shorthand in overrides[id])
+                extension = overrides[shorthand]
 
-            obj[selector] = chrome.runtime.getURL(
+            obj[selector] = browser.runtime.getURL(
                 `assets/pieces/${id}/${shorthand}.${extension}`
             )
         }
@@ -89,6 +91,7 @@ const Pieces = {
                 "bq": "gif",
                 "wq": "gif"
             },
+            "random": {}
         }
         for (let piece of pieces) {
             overrides["random"][Object.values(piece)[0]] = "gif"

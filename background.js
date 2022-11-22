@@ -1,11 +1,9 @@
 // Set up default values in storage during installation
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set(
-        {
-            pieces: "neo",
-            board: "marble",
-        }
-    )
+browser.runtime.onInstalled.addListener(function() {
+    browser.storage.sync.set({
+        pieces: "neo",
+        board: "marble",
+    })
 })
 
 /* 

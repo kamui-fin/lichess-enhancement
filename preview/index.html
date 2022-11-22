@@ -2488,7 +2488,7 @@
         document.querySelector(".preview").addEventListener(
             "click",
             function () {
-                chrome.tabs.create({
+                browser.tabs.create({
                     url: "assets/preview/index.html",
                 })
             },
@@ -2498,7 +2498,7 @@
         document.querySelector(".github").addEventListener(
             "click",
             function () {
-                chrome.tabs.create({
+                browser.tabs.create({
                     url: "https://github.com/ducksper/lichess_enhancement",
                 })
             },

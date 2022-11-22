@@ -7,7 +7,7 @@
     "icons": {
         "48": "assets/logo/chesscom_pawn.png"
     },
-    "permissions": ["activeTab", "storage", "scripting"],
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": ["https://lichess.org/*"],
@@ -29,5 +29,11 @@
             "resources": ["assets/*"],
             "matches": ["<all_urls>"]
         }
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "enhancer@lichess.org",
+            "strict_min_version": "42.0"
+        }
+    }
 }
