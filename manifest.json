@@ -7,7 +7,11 @@
     "icons": {
         "48": "assets/logo/chesscom_pawn.png"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "webRequest", "webRequestBlocking"],
+    "host_permissions": [
+        "https://lichess.org/*",
+        "https://lichess1.org/*"
+    ],
     "content_scripts": [
         {
             "matches": ["https://lichess.org/*"],

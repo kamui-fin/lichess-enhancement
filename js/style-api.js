@@ -2,7 +2,6 @@ const Boards = {
     updateBg: (url) => {
         for (let board of document.querySelectorAll("cg-board")) {
             board.style.backgroundImage = `url(${url})`
-            console.log(board)
         }
 
     },
