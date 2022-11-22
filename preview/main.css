@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../font/montserrat.woff2') format('woff2');
+    font-family: "Montserrat";
+    src: url("../font/montserrat.woff2") format("woff2");
 }
 
 body {
@@ -146,7 +146,7 @@ body {
 
 .num {
     color: #e9eacf;
-    font-size: 1.5em
+    font-size: 1.5em;
 }
 
 .name {

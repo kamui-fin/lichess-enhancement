@@ -1,18 +1,19 @@
-//Set up default values in storage during installation
+// Set up default values in storage during installation
 chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({
-        'pieces': 'neo',
-        'board': 'green',
-        'desactivateGhostsCustomStyle': false
-    }, function() {
-        
-    })
+    chrome.storage.sync.set(
+        {
+            pieces: "neo",
+            board: "marble",
+        }
+    )
 })
 
-//Block audio files from network
-/*chrome.webRequest.onBeforeRequest.addListener(
+/* 
+// Block audio files from network
+
+chrome.webRequest.onBeforeRequest.addListener(
     function() {
-        return {cancel: true};
+        return { cancel: true };
     },
     {
         urls: ["https://lichess1.org/assets/_Iu1lae/sound/standard/*.ogg"]
