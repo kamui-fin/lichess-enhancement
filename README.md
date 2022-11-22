@@ -4,17 +4,24 @@
 
 </h1>
 
-<p align="center">
-<!--<a href="#"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get uBlock Origin for Firefox"></a>-->
-<a href="https://browser.google.com/webstore/detail/lichess-enhancement/ikmpcihcohdjammgkopfgohojdelmfoi"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get uBlock Origin for Chromium"></a>
-</p>
-
----
-
 ```diff
 ! The extension can reduce fps in bullet/ultrabullet
 ```
 
-## Manual installation
+## Chrome
+
+[CRX download link](https://www.mediafire.com/file/bhk7lgf5sde7f9r/lichess_enhancement.crx/file)
+
+### Manual installation
 
 On browser: After downloading the file, you go in the extension section, and you activate developer mode. Then you import the folder by clicking on "install unpacked extension browser". You can watch the manual installation process in this video for browser (windows): https://www.youtube.com/watch?v=SffjcBh520w <br/>
+
+## Firefox
+
+Note: you must be on Firefox Developer, Nightly, or ESR for this to work.
+
+First, go to `about:config` and set `xpinstall.signatures.required` to `false`, and then load [this](https://www.mediafire.com/file/l64yyc3my4pd0dv/lichess_enhancement-4.1.zip/file) XPI.
+
+Make sure to select both optional permissions in `about:addons` for the extension to work properly:
+![](perms.png)
+

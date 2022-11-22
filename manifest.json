@@ -1,17 +1,19 @@
 {
     "manifest_version": 3,
     "name": "Lichess enhancement",
-    "version": "4",
+    "version": "4.1",
     "description": "New styles of pieces and boards for Lichess",
     "homepage_url": "https://github.com/ducksper/lichess_enhancement",
     "icons": {
         "48": "assets/logo/chesscom_pawn.png"
     },
-    "permissions": ["storage", "webRequest", "webRequestBlocking", "declarativeNetRequest"],
-    "host_permissions": [
-        "https://lichess.org/*",
-        "https://lichess1.org/*"
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "declarativeNetRequest"
     ],
+    "host_permissions": ["https://lichess.org/*", "https://lichess1.org/*"],
     "content_scripts": [
         {
             "matches": ["https://lichess.org/*"],
@@ -21,7 +23,7 @@
         }
     ],
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"]
     },
     "action": {
         "default_icon": "assets/logo/chesscom_pawn.png",
@@ -36,7 +38,7 @@
     ],
     "browser_specific_settings": {
         "gecko": {
-            "id": "enhancer@lichess.org",
+            "id": "lichessenhancer@kamui.org",
             "strict_min_version": "42.0"
         }
     }

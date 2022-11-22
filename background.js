@@ -47,23 +47,3 @@ browser.storage.sync.get("board").then(data => {
         }
     })
 })
-
-/* 
-// Block audio files from network
-
-chrome.webRequest.onBeforeRequest.addListener(
-    function() {
-        return { cancel: true };
-    },
-    {
-        urls: ["https://lichess1.org/assets/_Iu1lae/sound/standard/*.ogg"]
-    },
-    ["blocking"]
-);
-
-Permissions:
-        "<all_urls>",
-        "webRequest",
-        "webRequestBlocking"
-*/
-
