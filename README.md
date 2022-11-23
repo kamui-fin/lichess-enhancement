@@ -12,10 +12,6 @@
 
 [CRX download link](https://www.mediafire.com/file/bhk7lgf5sde7f9r/lichess_enhancement.crx/file)
 
-### Manual installation
-
-On browser: After downloading the file, you go in the extension section, and you activate developer mode. Then you import the folder by clicking on "install unpacked extension browser". You can watch the manual installation process in this video for browser (windows): https://www.youtube.com/watch?v=SffjcBh520w <br/>
-
 ## Firefox
 
 Note: you must be on Firefox Developer, Nightly, or ESR for this to work.
